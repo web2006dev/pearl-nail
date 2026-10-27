@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nail n Lash Studio & Academy | Mohali & Chandigarh Tricity | 4.5★ Luxury Salon & Training</title>
+  <meta name="description" content="Tricity's premier nail, lash, and permanent makeup studio & certified academy in Mohali Sector 64. 4.5★ rated with 210+ reviews. Gel extensions, Russian lashes, microblading, and masterclasses.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#C5A059',
+              goldDark: '#A67C37',
+              goldLight: '#F7F2E9',
+              dark: '#191614',
+              surface: '#24201D',
+              nude: '#FAF8F5',
+              border: '#EAE4DA',
+              muted: '#6E6760',
+              rose: '#F4ECE9'
+            }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#FAF8F5] text-[#4A443E] font-sans antialiased selection:bg-[#C5A059] selection:text-white">
+
+  <!-- TOP BAR / ANNOUNCEMENT -->
+  <div class="bg-[#191614] text-stone-300 text-xs py-2 px-4 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-4 text-center sm:text-left">
+        <span class="inline-flex items-center gap-1.5 text-amber-300 font-medium">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          Festive & Wedding Glow Specials Open
+        </span>
+        <span class="hidden md:inline text-stone-600">•</span>
+        <span class="hidden md:inline text-stone-400">SCO 107, Phase 10, Sector 64, Mohali (SAS Nagar), Punjab</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:+918427520007" class="hover:text-white transition flex items-center gap-1">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-[#C5A059]"></i>
+          +91 84275 20007
+        </a>
+        <span class="text-stone-600">|</span>
+        <div class="flex items-center gap-1 text-amber-400 font-semibold">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+          <span>4.5</span>
+          <span class="text-stone-400 font-normal">(210+ Google Reviews)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-40 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex flex-col">
+          <span class="font-serif text-2xl sm:text-3xl font-semibold tracking-wider text-[#191614] uppercase">
+            Nail <span class="text-[#C5A059] italic font-normal">n</span> Lash
+          </span>
+          <span class="text-[10px] tracking-[0.22em] uppercase text-stone-500 font-medium">
+            Studio & Academy · Mohali
+          </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-700">
+          <a href="#services" class="hover:text-[#C5A059] transition">Services</a>
+          <a href="#academy" class="hover:text-[#C5A059] transition flex items-center gap-1">
+            Academy
+            <span class="bg-[#F8F3EA] text-[#A67C37] text-[10px] font-semibold px-1.5 py-0.5 rounded border border-[#C5A059]/30">Certified</span>
+          </a>
+          <a href="#why-us" class="hover:text-[#C5A059] transition">Why Us</a>
+          <a href="#reviews" class="hover:text-[#C5A059] transition">Reviews</a>
+          <a href="#location" class="hover:text-[#C5A059] transition">Location & Hours</a>
+        </nav>
+
+        <!-- Right CTA Buttons -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="https://wa.me/918427520007?text=Hello%20Nail%20n%20Lash%20Studio!%20I%20would%20like%20to%20inquire%20about%20your%20services." 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="px-3.5 py-2.5 rounded-full border border-stone-300 hover:border-[#C5A059] text-stone-800 hover:text-[#C5A059] text-xs font-medium flex items-center gap-2 transition bg-white/60">
+            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+            WhatsApp
+          </a>
+          <button onclick="openBookingModal()" 
+                  class="gold-button text-stone-900 font-semibold text-xs tracking-wider uppercase px-5 py-2.5 rounded-full flex items-center gap-2">
+            <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+            Book Appointment
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-stone-800 hover:bg-stone-100 focus:outline-none">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu-drawer" class="hidden md:hidden bg-white border-b border-stone-200 px-6 py-5 shadow-xl">
+      <div class="flex flex-col gap-4 text-sm font-medium">
+        <a href="#services" class="mobile-nav-link text-stone-800 py-1 border-b border-stone-100">Services & Pricing</a>
+        <a href="#academy" class="mobile-nav-link text-stone-800 py-1 border-b border-stone-100 flex items-center justify-between">
+          <span>Academy Masterclasses</span>
+          <span class="bg-amber-100 text-amber-800 text-[10px] px-2 py-0.5 rounded">ISO Certified</span>
+        </a>
+        <a href="#why-us" class="mobile-nav-link text-stone-800 py-1 border-b border-stone-100">Why Nail n Lash</a>
+        <a href="#reviews" class="mobile-nav-link text-stone-800 py-1 border-b border-stone-100">Google Reviews (4.5★)</a>
+        <a href="#location" class="mobile-nav-link text-stone-800 py-1 border-b border-stone-100">Studio Location & Hours</a>
+        <div class="pt-3 flex flex-col gap-2">
+          <button onclick="openBookingModal()" class="gold-button w-full text-stone-900 py-3 rounded-xl font-semibold text-center text-xs tracking-wider uppercase">
+            Book Appointment Online
+          </button>
+          <a href="tel:+918427520007" class="w-full text-center py-2.5 text-stone-700 bg-stone-100 rounded-xl text-xs font-semibold">
+            Call +91 84275 20007
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-12 pb-20 md:pt-16 md:pb-24 overflow-hidden border-b border-[#EAE4DA]">
+    <!-- Ambient background glows -->
+    <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[#EAD9C6]/40 blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -left-32 w-80 h-80 rounded-full bg-[#F5E6E8]/40 blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Live Status & Tricity Tag -->
+          <div class="flex flex-wrap items-center gap-3">
+            <div id="live-status-pill">
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-800 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-status-dot"></span>
+                Open Today · 10:00 AM – 7:30 PM
+              </span>
+            </div>
+            <span class="text-xs font-semibold tracking-wider uppercase text-[#A67C37] bg-[#F7F2E9] px-3 py-1 rounded-full border border-[#C5A059]/30">
+              Serving Mohali • Chandigarh • Panchkula
+            </span>
+          </div>
+
+          <!-- Main Headline -->
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#191614] leading-[1.12] tracking-tight">
+            Artistry For Your Nails, <br class="hidden sm:inline" />
+            <span class="italic font-normal text-[#A67C37]">Lashes & Radiant Self.</span>
+          </h1>
+
+          <!-- Value proposition paragraph -->
+          <p class="text-stone-600 text-base sm:text-lg max-w-2xl leading-relaxed">
+            Punjab’s top-tier studio and professional beauty academy since 2019. From sculpted acrylic & gel extensions to featherlight Russian volume lashes, permanent makeup & Korean skin facials — crafted with hospital-grade hygiene.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <button onclick="openBookingModal()" 
+                    class="gold-button text-stone-900 font-semibold text-sm px-7 py-3.5 rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transition">
+              <i data-lucide="sparkle" class="w-4 h-4"></i>
+              Book Your Appointment
+            </button>
+            <a href="#academy" 
+               class="px-6 py-3.5 rounded-full border border-stone-300 hover:border-[#191614] text-stone-900 font-medium text-sm transition flex items-center gap-2 bg-white/80">
+              <i data-lucide="graduation-cap" class="w-4 h-4 text-[#A67C37]"></i>
+              Academy Courses
+            </a>
+            <a href="https://wa.me/918427520007?text=Hi%20Nail%20n%20Lash!%20I%20want%20to%20consult%20for%20an%20appointment." 
+               target="_blank"
+               rel="noopener noreferrer"
+               class="p-3.5 rounded-full border border-stone-300 hover:border-emerald-500 text-emerald-700 bg-white/80 hover:bg-emerald-50 transition" 
+               title="Direct WhatsApp Consultation">
+              <i data-lucide="message-circle" class="w-5 h-5"></i>
+            </a>
+          </div>
+
+          <!-- Trust Proof Metrics -->
+          <div class="pt-6 border-t border-stone-200/80 grid grid-cols-3 gap-4 max-w-lg">
+            <div>
+              <div class="flex items-center text-amber-500 font-serif text-2xl sm:text-3xl font-semibold">
+                4.5 <span class="text-sm font-sans text-stone-400 ml-1">/ 5.0</span>
+              </div>
+              <div class="text-xs text-stone-500 flex items-center gap-1 mt-0.5">
+                <i data-lucide="check-check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                210+ Google Reviews
+              </div>
+            </div>
+            <div>
+              <div class="font-serif text-2xl sm:text-3xl font-semibold text-[#191614]">
+                14.3k+
+              </div>
+              <div class="text-xs text-stone-500 mt-0.5">
+                Instagram Community
+              </div>
+            </div>
+            <div>
+              <div class="font-serif text-2xl sm:text-3xl font-semibold text-[#191614]">
+                2019
+              </div>
+              <div class="text-xs text-stone-500 mt-0.5">
+                Pioneering Tricity
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Visual Showcase / Modern Studio Imagery -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Primary Card Image -->
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-stone-200/90 aspect-[4/5] bg-stone-100">
+              <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=900&q=80" 
+                   alt="Luxury Nail Art & Polish Application at Nail n Lash Studio Mohali" 
+                   class="w-full h-full object-cover">
+              
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+
+              <!-- Floating Bottom Badge -->
+              <div class="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-white/60 shadow-lg text-stone-800">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-[#FAF8F5] border border-[#C5A059] flex items-center justify-center text-[#A67C37]">
+                      <i data-lucide="crown" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-serif text-base font-semibold text-stone-900 leading-tight">Master Craftsmanship</h4>
+                      <p class="text-[11px] text-stone-500">Internationally Certified Stylists</p>
+                    </div>
+                  </div>
+                  <span class="text-xs font-semibold text-[#A67C37] bg-[#FAF8F5] px-2.5 py-1 rounded-full border border-[#C5A059]/40">
+                    Phase 10, Mohali
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Mini Badge (Lash & Brow Excellence) -->
+            <div class="absolute -top-4 -left-4 sm:-left-6 bg-white rounded-2xl p-3.5 shadow-xl border border-stone-200 flex items-center gap-3 max-w-[210px]">
+              <div class="w-9 h-9 rounded-xl bg-amber-50 text-[#C5A059] flex items-center justify-center font-bold">
+                <i data-lucide="eye" class="w-5 h-5"></i>
+              </div>
+              <div class="text-left">
+                <p class="text-[11px] font-bold text-stone-900 uppercase tracking-wider">Volume Lashes</p>
+                <p class="text-[10px] text-stone-500">60 to 160+ Extensions</p>
+              </div>
+            </div>
+
+            <!-- Floating Mini Badge (Google Verified 4.5 Stars) -->
+            <div class="absolute -bottom-4 -right-2 sm:-right-4 bg-white rounded-2xl p-3.5 shadow-xl border border-stone-200 flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-stone-900">Hospital-Grade</p>
+                <p class="text-[10px] text-stone-500">Autoclave Sterilization</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 SIGNATURE PILLARS (CONCISE OVERVIEW) -->
+  <section class="py-12 bg-white border-b border-[#EAE4DA]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        
+        <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-stone-200/80 hover:border-[#C5A059] transition">
+          <div class="w-10 h-10 rounded-xl bg-[#F7F2E9] text-[#A67C37] flex items-center justify-center mb-3">
+            <i data-lucide="palette" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-serif text-lg font-semibold text-stone-900">Nails Atelier</h3>
+          <p class="text-xs text-stone-500 mt-1 leading-relaxed">Acrylics, Gel Full Sets, Russian manicures & bespoke 3D nail art.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-stone-200/80 hover:border-[#C5A059] transition">
+          <div class="w-10 h-10 rounded-xl bg-[#F7F2E9] text-[#A67C37] flex items-center justify-center mb-3">
+            <i data-lucide="eye" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-serif text-lg font-semibold text-stone-900">Lash & Brow Bar</h3>
+          <p class="text-xs text-stone-500 mt-1 leading-relaxed">60-160+ volume lashes, lash lift & tint, and brow mapping.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-stone-200/80 hover:border-[#C5A059] transition">
+          <div class="w-10 h-10 rounded-xl bg-[#F7F2E9] text-[#A67C37] flex items-center justify-center mb-3">
+            <i data-lucide="smile" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-serif text-lg font-semibold text-stone-900">PMU & Skin Clinic</h3>
+          <p class="text-xs text-stone-500 mt-1 leading-relaxed">Microblading, Ombre brows, Lip blushing & Korean Glass facials.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-stone-200/80 hover:border-[#C5A059] transition">
+          <div class="w-10 h-10 rounded-xl bg-[#F7F2E9] text-[#A67C37] flex items-center justify-center mb-3">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-serif text-lg font-semibold text-stone-900">The Academy</h3>
+          <p class="text-xs text-stone-500 mt-1 leading-relaxed">Certified training programs with live models & complete starter kits.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES & PRICING MENU (TABBED, CONCISE, NON-BLOATED) -->
+  <section id="services" class="py-16 md:py-24 bg-[#FAF8F5] border-b border-[#EAE4DA]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="text-xs font-bold tracking-widest uppercase text-[#A67C37]">Curated Treatments</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-stone-900 mt-1">
+            Studio Services & Experiences
+          </h2>
+          <p class="text-stone-600 text-sm mt-2 max-w-xl">
+            Each treatment is tailored to your unique aesthetic with international standard pigments and premium grade equipment.
+          </p>
+        </div>
+        <div>
+          <button onclick="openBookingModal()" class="gold-button text-stone-900 font-semibold text-xs tracking-wider uppercase px-5 py-3 rounded-full flex items-center gap-2">
+            <i data-lucide="calendar-plus" class="w-4 h-4"></i>
+            Schedule Any Service
+          </button>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-4 no-scrollbar mb-8">
+        <button class="service-tab active px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition whitespace-nowrap bg-stone-900 text-white border border-stone-900" data-category="all">
+          All Services
+        </button>
+        <button class="service-tab px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition whitespace-nowrap bg-white text-stone-700 border border-stone-200 hover:border-stone-400" data-category="nails">
+          Nails Atelier
+        </button>
+        <button class="service-tab px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition whitespace-nowrap bg-white text-stone-700 border border-stone-200 hover:border-stone-400" data-category="lashes">
+          Lashes & Brows
+        </button>
+        <button class="service-tab px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition whitespace-nowrap bg-white text-stone-700 border border-stone-200 hover:border-stone-400" data-category="pmu">
+          PMU & Clinical Skin
+        </button>
+        <button class="service-tab px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition whitespace-nowrap bg-white text-stone-700 border border-stone-200 hover:border-stone-400" data-category="hair-spa">
+          Hair, Spa & Waxing
+        </button>
+      </div>
+
+      <!-- Services Grid -->
+      <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- ITEM 1: Gel Nail Extensions -->
+        <div class="service-item card-luxury rounded-2xl p-6 flex flex-col justify-between" data-category="nails">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-serif text-xl font-semibold text-stone-900">Gel Nail Extensions & Tips</h3>
+              <span class="text-xs font-semibold text-[#A67C37] bg-[#F7F2E9] px-2.5 py-1 rounded-md whitespace-nowrap">Bestseller</span>
+            </div>
+            <p class="text-xs text-stone-500 leading-relaxed mb-4">
+              Lightweight, durable hard gel overlays crafted with Russian cuticle care, flawless apex sculpting, and high-shine gloss.
+            </p>
+            <ul class="text-[11px] text-stone-600 space-y-1 mb-4">
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Includes cut, file & dry manicure</li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Lasts 4–6 weeks without chipping</li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-stone-800">From ₹1,499</span>
+            <button onclick="openBookingModal('Gel Nail Extensions')" class="text-xs font-semibold text-[#A67C37] hover:text-[#191614] flex items-center gap-1">
+              Book Service <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ITEM 2: Acrylic Full Set & Fill In -->
+        <div class="service-item card-luxury rounded-2xl p-6 flex flex-col justify-between" data-category="nails">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-serif text-xl font-semibold text-stone-900">Acrylic Full Set & Fill-In</h3>
+              <span class="text-xs font-semibold text-stone-600 bg-stone-100 px-2.5 py-1 rounded-md whitespace-nowrap">Signature</span>
+            </div>
+            <p class="text-xs text-stone-500 leading-relaxed mb-4">
+              High-strength acrylic extensions tailored to desired shape (Coffin, Almond, Stiletto, Square) with precision infill maintenance.
+            </p>
+            <ul class="text-[11px] text-stone-600 space-y-1 mb-4">
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Acrylic Full Set or Infill repair</li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Non-yellowing premium monomer</li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-stone-800">From ₹1,799</span>
+            <button onclick="openBookingModal('Acrylic Full Set')" class="text-xs font-semibold text-[#A67C37] hover:text-[#191614] flex items-center gap-1">
+              Book Service <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ITEM 3: Dip Powder & Custom Nail Art -->
+        <div class="service-item card-luxury rounded-2xl p-6 flex flex-col justify-between" data-category="nails">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-serif text-xl font-semibold text-stone-900">Dip Powder & 3D Nail Art</h3>
+              <span class="text-xs font-semibold text-stone-600 bg-stone-100 px-2.5 py-1 rounded-md whitespace-nowrap">Trendy</span>
+            </div>
+            <p class="text-xs text-stone-500 leading-relaxed mb-4">
+              Vitamin-infused dip powder nails, chrome mirror finishes, French ombré, Swarovski crystal placement, and custom bridal themes.
+            </p>
+            <ul class="text-[11px] text-stone-600 space-y-1 mb-4">
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Press-on nails & emergency repair</li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Gel polish changes & safe removal</li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-stone-800">From ₹999</span>
+            <button onclick="openBookingModal('Dip Powder & Nail Art')" class="text-xs font-semibold text-[#A67C37] hover:text-[#191614] flex items-center gap-1">
+              Book Service <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ITEM 4: Eyelash Extensions (60 to 160+ Lashes) -->
+        <div class="service-item card-luxury rounded-2xl p-6 flex flex-col justify-between" data-category="lashes">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-serif text-xl font-semibold text-stone-900">Eyelash Extensions (Classic to Mega Volume)</h3>
+              <span class="text-xs font-semibold text-[#A67C37] bg-[#F7F2E9] px-2.5 py-1 rounded-md whitespace-nowrap">Fan Favorite</span>
+            </div>
+            <p class="text-xs text-stone-500 leading-relaxed mb-4">
+              Customized lash mapping. Choose from Natural 60 lashes, 120-159 hybrid sets, or 160+ ultra-dense Russian mega volume.
+            </p>
+            <ul class="text-[11px] text-stone-600 space-y-1 mb-4">
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Featherlight faux-mink fibers</li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Eye lash shampoo & gentle cleansing</li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-stone-800">From ₹1,999</span>
+            <button onclick="openBookingModal('Eyelash Extensions')" class="text-xs font-semibold text-[#A67C37] hover:text-[#191614] flex items-center gap-1">
+              Book Service <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ITEM 5: Eye Lash Lift & Brow Mapping -->
+        <div class="service-item card-luxury rounded-2xl p-6 flex flex-col justify-between" data-category="lashes">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-serif text-xl font-semibold text-stone-900">Lash Lift, Perm & Brow Mapping</h3>
+              <span class="text-xs font-semibold text-stone-600 bg-stone-100 px-2.5 py-1 rounded-md whitespace-nowrap">Low Maintenance</span>
+            </div>
+            <p class="text-xs text-stone-500 leading-relaxed mb-4">
+              Keratin lash lift and tint that curls natural lashes upwards for 6-8 weeks. Includes precise golden-ratio brow mapping and wax styling.
+            </p>
+            <ul class="text-[11px] text-stone-600 space-y-1 mb-4">
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Nourishing keratin lash infusion</li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Brow tinting & symmetrical shaping</li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-stone-800">From ₹1,299</span>
+            <button onclick="openBookingModal('Lash Lift & Brow Mapping')" class="text-xs font-semibold text-[#A67C37] hover:text-[#191614] flex items-center gap-1">
+              Book Service <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ITEM 6: Microblading & Ombré Powder Brows -->
+        <div class="service-item card-luxury rounded-2xl p-6 flex flex-col justify-between" data-category="pmu">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-serif text-xl font-semibold text-stone-900">Microblading & Ombre Brows</h3>
+              <span class="text-xs font-semibold text-[#A67C37] bg-[#F7F2E9] px-2.5 py-1 rounded-md whitespace-nowrap">PMU Master</span>
+            </div>
+            <p class="text-xs text-stone-500 leading-relaxed mb-4">
+              Semi-permanent hyper-realistic hair strokes or soft powdery shading (HD Combination). Hypoallergenic EU-certified organic pigments.
+            </p>
+            <ul class="text-[11px] text-stone-600 space-y-1 mb-4">
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Microshading & Scar camouflage</li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Permanent touch-up guarantee</li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-stone-800">From ₹4,999</span>
+            <button onclick="openBookingModal('Microblading & Ombre Brows')" class="text-xs font-semibold text-[#A67C37] hover:text-[#191614] flex items-center gap-1">
+              Book Service <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ITEM 7: Lip Blushing & PMU Touch-Ups -->
+        <div class="service-item card-luxury rounded-2xl p-6 flex flex-col justify-between" data-category="pmu">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-serif text-xl font-semibold text-stone-900">Permanent Lip Blushing</h3>
+              <span class="text-xs font-semibold text-stone-600 bg-stone-100 px-2.5 py-1 rounded-md whitespace-nowrap">Aesthetic</span>
+            </div>
+            <p class="text-xs text-stone-500 leading-relaxed mb-4">
+              Soft tint neutralization and contour enhancement giving lips a youthful, tinted rose hue that lasts up to 2–3 years.
+            </p>
+            <ul class="text-[11px] text-stone-600 space-y-1 mb-4">
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Corrects dark lip pigmentation</li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Nipple colouring & aesthetic camouflage</li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-stone-800">From ₹4,499</span>
+            <button onclick="openBookingModal('Lip Blushing')" class="text-xs font-semibold text-[#A67C37] hover:text-[#191614] flex items-center gap-1">
+              Book Service <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ITEM 8: Korean Glass Facial & Hydra Facial -->
+        <div class="service-item card-luxury rounded-2xl p-6 flex flex-col justify-between" data-category="pmu">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-serif text-xl font-semibold text-stone-900">Korean Glass Facial & BB Glow</h3>
+              <span class="text-xs font-semibold text-[#A67C37] bg-[#F7F2E9] px-2.5 py-1 rounded-md whitespace-nowrap">Instant Glow</span>
+            </div>
+            <p class="text-xs text-stone-500 leading-relaxed mb-4">
+              Deep clinical hydration, dermaplaning dead cell peel, nano-infusion BB Glow ampoule, and Hydra vacuum pore detoxification.
+            </p>
+            <ul class="text-[11px] text-stone-600 space-y-1 mb-4">
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Dermaplaning + LED light therapy</li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Ideal for brides & festive events</li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-stone-800">From ₹2,499</span>
+            <button onclick="openBookingModal('Korean Glass Facial')" class="text-xs font-semibold text-[#A67C37] hover:text-[#191614] flex items-center gap-1">
+              Book Service <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ITEM 9: Hair Extensions, Keratin & Spa Waxing -->
+        <div class="service-item card-luxury rounded-2xl p-6 flex flex-col justify-between" data-category="hair-spa">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-serif text-xl font-semibold text-stone-900">Hair Extensions, Keratin & Rica Waxing</h3>
+              <span class="text-xs font-semibold text-stone-600 bg-stone-100 px-2.5 py-1 rounded-md whitespace-nowrap">Full Care</span>
+            </div>
+            <p class="text-xs text-stone-500 leading-relaxed mb-4">
+              100% human hair extensions with nano beads & micro ring application. Keratin smooth treatments, full leg Rica waxing, and therapeutic body massage.
+            </p>
+            <ul class="text-[11px] text-stone-600 space-y-1 mb-4">
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Nano beads & Keratin tip extensions</li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Italian Rica waxing & callus pedicure</li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-stone-800">From ₹250 / Custom</span>
+            <button onclick="openBookingModal('Hair & Spa Services')" class="text-xs font-semibold text-[#A67C37] hover:text-[#191614] flex items-center gap-1">
+              Book Service <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick note for custom bridal & packages -->
+      <div class="mt-10 p-6 rounded-2xl bg-white border border-[#EAE4DA] flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-amber-50 text-[#C5A059] flex items-center justify-center shrink-0">
+            <i data-lucide="gift" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-serif text-lg font-semibold text-stone-900">Planning a Wedding or Festive Glam?</h4>
+            <p class="text-xs text-stone-500">Customized Tricity bridal & party packages combining luxury nails, lashes, facials, and hair styling.</p>
+          </div>
+        </div>
+        <a href="https://wa.me/918427520007?text=Hi!%20I%20am%20interested%20in%20Bridal%20and%20Festive%20packages%20at%20Nail%20n%20Lash%20Studio." 
+           target="_blank"
+           class="gold-button text-stone-900 font-semibold text-xs tracking-wider uppercase px-5 py-3 rounded-full whitespace-nowrap">
+          Consult On WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- THE ACADEMY SECTION (PRESTIGIOUS, CONCISE & HIGH-CONVERTING) -->
+  <section id="academy" class="py-16 md:py-24 bg-[#191614] text-white relative overflow-hidden">
+    <!-- Subtle pattern / glow background -->
+    <div class="absolute -top-32 right-0 w-96 h-96 rounded-full bg-[#C5A059]/10 blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      
+      <div class="max-w-3xl mb-12">
+        <span class="text-xs font-bold tracking-widest uppercase text-[#C5A059]">Government & Globally Aligned Certification</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold mt-2 text-white">
+          Nail n Lash Academy LLP
+        </h2>
+        <p class="text-stone-300 text-sm sm:text-base mt-3 leading-relaxed">
+          Launch your high-income career as an internationally trained beauty artist. Learn cutting-edge nail sculpting, Russian volume lash application, and permanent makeup from industry pioneers since 2019.
+        </p>
+      </div>
+
+      <!-- 3 Signature Courses -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        
+        <!-- Course 1 -->
+        <div class="bg-stone-900/90 rounded-2xl p-6 border border-stone-800 hover:border-[#C5A059] transition flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-stone-800 text-[#C5A059] flex items-center justify-center mb-4">
+              <i data-lucide="hand" class="w-5 h-5"></i>
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#C5A059] bg-[#C5A059]/10 px-2 py-0.5 rounded">Comprehensive</span>
+            <h3 class="font-serif text-xl font-semibold text-white mt-2">Professional Nail Extension Master</h3>
+            <p class="text-xs text-stone-400 mt-2 leading-relaxed">
+              Complete module covering Acrylic extensions, Gel overlays, Russian e-file cuticle prep, Dip powder, 3D nail art, and studio hygiene.
+            </p>
+            <ul class="text-xs text-stone-300 mt-4 space-y-2 border-t border-stone-800 pt-4">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#C5A059]"></i> 100% Hands-on Live Models</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#C5A059]"></i> Professional Toolkit Included</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#C5A059]"></i> ISO Certified Diploma</li>
+            </ul>
+          </div>
+          <button onclick="openAcademyModal('Professional Nail Extension Master')" class="mt-6 w-full py-2.5 rounded-xl bg-stone-800 hover:bg-[#C5A059] hover:text-stone-900 text-xs font-semibold uppercase tracking-wider transition border border-stone-700">
+            Request Syllabus
+          </button>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="bg-stone-900/90 rounded-2xl p-6 border border-stone-800 hover:border-[#C5A059] transition flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-stone-800 text-[#C5A059] flex items-center justify-center mb-4">
+              <i data-lucide="eye" class="w-5 h-5"></i>
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#C5A059] bg-[#C5A059]/10 px-2 py-0.5 rounded">High Demand</span>
+            <h3 class="font-serif text-xl font-semibold text-white mt-2">Master Lash Extension Artistry</h3>
+            <p class="text-xs text-stone-400 mt-2 leading-relaxed">
+              From Classic 1:1 lash isolation to 6D-10D Russian Volume fanning, lash lifting & perm chemistry, isolation safety, and retention secrets.
+            </p>
+            <ul class="text-xs text-stone-300 mt-4 space-y-2 border-t border-stone-800 pt-4">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#C5A059]"></i> Classic, Hybrid & Mega Volume</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#C5A059]"></i> Eye health & lash mapping rules</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#C5A059]"></i> Client consultation training</li>
+            </ul>
+          </div>
+          <button onclick="openAcademyModal('Master Lash Extension Artistry')" class="mt-6 w-full py-2.5 rounded-xl bg-stone-800 hover:bg-[#C5A059] hover:text-stone-900 text-xs font-semibold uppercase tracking-wider transition border border-stone-700">
+            Request Syllabus
+          </button>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="bg-stone-900/90 rounded-2xl p-6 border border-stone-800 hover:border-[#C5A059] transition flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-stone-800 text-[#C5A059] flex items-center justify-center mb-4">
+              <i data-lucide="feather" class="w-5 h-5"></i>
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#C5A059] bg-[#C5A059]/10 px-2 py-0.5 rounded">Premium Specialty</span>
+            <h3 class="font-serif text-xl font-semibold text-white mt-2">Permanent Make-Up & Microblading</h3>
+            <p class="text-xs text-stone-400 mt-2 leading-relaxed">
+              Clinical PMU certification in Microblading, Ombré Powder brows, Lip blushing, BB Glow application, needle depth, and pigment color theory.
+            </p>
+            <ul class="text-xs text-stone-300 mt-4 space-y-2 border-t border-stone-800 pt-4">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#C5A059]"></i> Clinical sterilisation & bloodborne safety</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#C5A059]"></i> Live model guided practice</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#C5A059]"></i> Business & client pricing playbook</li>
+            </ul>
+          </div>
+          <button onclick="openAcademyModal('Permanent Make-Up & Microblading')" class="mt-6 w-full py-2.5 rounded-xl bg-stone-800 hover:bg-[#C5A059] hover:text-stone-900 text-xs font-semibold uppercase tracking-wider transition border border-stone-700">
+            Request Syllabus
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Academy Trust Banner -->
+      <div class="rounded-2xl bg-gradient-to-r from-stone-900 via-stone-800 to-stone-900 p-6 border border-stone-700 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-[#C5A059]/20 text-[#C5A059] flex items-center justify-center shrink-0">
+            <i data-lucide="briefcase" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-serif text-lg font-semibold text-white">Start Your Own Salon or Freelance Career</h4>
+            <p class="text-xs text-stone-400">Our alumni run thriving studios across Mohali, Chandigarh, Panchkula, Ludhiana, and Canada.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="https://www.instagram.com/nailnlash_academy/" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="px-4 py-2.5 rounded-full border border-stone-600 hover:border-white text-xs font-medium text-stone-300 hover:text-white transition flex items-center gap-1.5">
+            <i data-lucide="instagram" class="w-4 h-4"></i>
+            @nailnlash_academy
+          </a>
+          <button onclick="openAcademyModal()" class="gold-button text-stone-900 font-semibold text-xs tracking-wider uppercase px-5 py-2.5 rounded-full">
+            Inquire For Next Batch
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US (HYGIENE & CREDIBILITY) -->
+  <section id="why-us" class="py-16 md:py-20 bg-white border-b border-[#EAE4DA]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold tracking-widest uppercase text-[#A67C37]">The Gold Standard</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-stone-900 mt-1">
+          Why Discerning Clients Trust Nail n Lash
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <div class="text-center p-6 rounded-2xl bg-[#FAF8F5] border border-stone-200">
+          <div class="w-12 h-12 rounded-full bg-white shadow-sm border border-stone-200 text-[#C5A059] flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif text-lg font-semibold text-stone-900">Hospital-Grade Sanitation</h3>
+          <p class="text-xs text-stone-500 mt-2 leading-relaxed">
+            Every metal tool undergoes medical autoclave sterilization. Disposable buffers, files, and micro-applicators used per client.
+          </p>
+        </div>
+
+        <div class="text-center p-6 rounded-2xl bg-[#FAF8F5] border border-stone-200">
+          <div class="w-12 h-12 rounded-full bg-white shadow-sm border border-stone-200 text-[#C5A059] flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif text-lg font-semibold text-stone-900">Internationally Trained</h3>
+          <p class="text-xs text-stone-500 mt-2 leading-relaxed">
+            Stylists certified in Russian nail architecture, Korean skin infusion techniques, and European lash extension standards.
+          </p>
+        </div>
+
+        <div class="text-center p-6 rounded-2xl bg-[#FAF8F5] border border-stone-200">
+          <div class="w-12 h-12 rounded-full bg-white shadow-sm border border-stone-200 text-[#C5A059] flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif text-lg font-semibold text-stone-900">Imported Global Pigments</h3>
+          <p class="text-xs text-stone-500 mt-2 leading-relaxed">
+            Hypoallergenic, vegan lash adhesives, medical-grade PMU pigments, and non-yellowing acrylic polymers from top global brands.
+          </p>
+        </div>
+
+        <div class="text-center p-6 rounded-2xl bg-[#FAF8F5] border border-stone-200">
+          <div class="w-12 h-12 rounded-full bg-white shadow-sm border border-stone-200 text-[#C5A059] flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif text-lg font-semibold text-stone-900">Transparent Pricing</h3>
+          <p class="text-xs text-stone-500 mt-2 leading-relaxed">
+            Honest upfront rates with zero surprise charges. Complimentary consultations before every lash and PMU appointment.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GOOGLE REVIEWS & SOCIAL PROOF -->
+  <section id="reviews" class="py-16 md:py-20 bg-[#FAF8F5] border-b border-[#EAE4DA]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <div class="flex items-center gap-2 text-amber-500 font-semibold text-sm mb-1">
+            <span class="flex text-amber-400">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </span>
+            <span class="text-stone-900 font-bold">4.5 Rating on Google</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-stone-900">
+            Loved By Over 210+ Tricity Clients
+          </h2>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="https://www.google.com/maps/place/Nail+n+Lash+Studio+%26+Academy" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="px-4 py-2 rounded-full border border-stone-300 text-stone-800 hover:border-stone-900 text-xs font-medium flex items-center gap-1.5 transition bg-white">
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            View All Reviews on Google
+          </a>
+        </div>
+      </div>
+
+      <!-- Real Reviews Cards (From Google Business Profile) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Review 1 -->
+        <div class="card-luxury rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-xs text-stone-600 leading-relaxed italic mb-4">
+              "Local nail salons and this place is the best. Super friendly staff. Reasonable prices for hair colour, nail and eyelash extensions services. And excellent quality work."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+            <div>
+              <h4 class="text-xs font-bold text-stone-900">Verified Client</h4>
+              <p class="text-[10px] text-stone-400">Google Review · Nail & Lash Client</p>
+            </div>
+            <span class="text-[10px] text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-medium">Verified Visit</span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="card-luxury rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-xs text-stone-600 leading-relaxed italic mb-4">
+              "Excellent services by Moni! Waxing and facial technique was amazing 👌👌 So relaxing and the glow was visible right away."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+            <div>
+              <h4 class="text-xs font-bold text-stone-900">Pooja S.</h4>
+              <p class="text-[10px] text-stone-400">Google Review · Facial & Waxing</p>
+            </div>
+            <span class="text-[10px] text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-medium">Verified Visit</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="card-luxury rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-xs text-stone-600 leading-relaxed italic mb-4">
+              "Not just the service but the staff is also very nice and humble. They take time to understand what nail shape and lash volume suits your face."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+            <div>
+              <h4 class="text-xs font-bold text-stone-900">Harpreet K.</h4>
+              <p class="text-[10px] text-stone-400">Google Review · Regular Customer</p>
+            </div>
+            <span class="text-[10px] text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-medium">Verified Visit</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LOCATION, HOURS & INSTANT CONTACT -->
+  <section id="location" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+        
+        <!-- Left: Studio Details Card -->
+        <div class="lg:col-span-5 bg-[#FAF8F5] rounded-3xl p-8 border border-stone-200 flex flex-col justify-between">
+          
+          <div class="space-y-6">
+            <div>
+              <span class="text-xs font-bold tracking-widest uppercase text-[#A67C37]">Visit Our Studio</span>
+              <h2 class="font-serif text-3xl font-semibold text-stone-900 mt-1">
+                Phase 10, Mohali
+              </h2>
+              <p class="text-xs text-stone-500 mt-1">
+                Conveniently located near ICICI Bank & Phase 10 market, easily accessible from Chandigarh Sector 40-47 & Panchkula.
+              </p>
+            </div>
+
+            <!-- Address Block -->
+            <div class="flex items-start gap-3.5 pt-2">
+              <div class="w-10 h-10 rounded-xl bg-white text-[#C5A059] border border-stone-200 flex items-center justify-center shrink-0">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-stone-900">Studio Address</h4>
+                <p class="text-xs text-stone-600 mt-1 leading-relaxed">
+                  Ground Floor and Basement, SCO 107, Phase 10, Sector 64, Sahibzada Ajit Singh Nagar (Mohali), Punjab 160062
+                </p>
+                <div class="flex items-center gap-3 mt-2">
+                  <button id="btn-copy-address" class="text-[11px] font-semibold text-[#A67C37] hover:underline flex items-center gap-1">
+                    <i data-lucide="copy" class="w-3 h-3"></i> Copy Address
+                  </button>
+                  <a href="https://maps.google.com/?q=Nail+n+Lash+Studio+SAS+Nagar+Sector+64+Phase+10" 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     class="text-[11px] font-semibold text-stone-800 hover:underline flex items-center gap-1">
+                    <i data-lucide="navigation" class="w-3 h-3"></i> Open Directions
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timings Block -->
+            <div class="flex items-start gap-3.5 pt-2">
+              <div class="w-10 h-10 rounded-xl bg-white text-[#C5A059] border border-stone-200 flex items-center justify-center shrink-0">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-stone-900">Operating Hours</h4>
+                <p class="text-xs text-stone-600 mt-1">
+                  <span class="font-semibold text-stone-800">Monday – Sunday:</span> 10:00 AM – 7:30 PM
+                </p>
+                <p class="text-[11px] text-stone-500 mt-0.5">Appointments recommended for zero waiting time.</p>
+              </div>
+            </div>
+
+            <!-- Direct Contact Numbers -->
+            <div class="flex items-start gap-3.5 pt-2">
+              <div class="w-10 h-10 rounded-xl bg-white text-[#C5A059] border border-stone-200 flex items-center justify-center shrink-0">
+                <i data-lucide="phone-call" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-stone-900">Direct Lines</h4>
+                <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-1 text-xs">
+                  <a href="tel:+918427520007" class="font-semibold text-stone-800 hover:text-[#C5A059] transition">
+                    +91 84275 20007
+                  </a>
+                  <span class="hidden sm:inline text-stone-300">•</span>
+                  <a href="tel:+918401959479" class="font-semibold text-stone-800 hover:text-[#C5A059] transition">
+                    +91 84019 59479
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Action Buttons -->
+          <div class="pt-8 flex flex-col sm:flex-row items-center gap-3">
+            <button onclick="openBookingModal()" class="w-full sm:w-auto flex-1 gold-button text-stone-900 font-semibold text-xs tracking-wider uppercase py-3 rounded-full text-center">
+              Book Appointment
+            </button>
+            <a href="https://wa.me/918427520007?text=Hello!%20I%20would%20like%20to%20book%20a%20slot%20at%20Nail%20n%20Lash%20Mohali." 
+               target="_blank"
+               class="w-full sm:w-auto px-5 py-3 rounded-full border border-stone-300 hover:border-emerald-500 text-stone-800 hover:text-emerald-700 text-xs font-semibold flex items-center justify-center gap-2 bg-white transition">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+              WhatsApp
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right: Interactive Map Embed Preview -->
+        <div class="lg:col-span-7 rounded-3xl overflow-hidden border border-stone-200 shadow-sm relative min-h-[380px] bg-stone-100">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.732731804153!2d76.7214777!3d30.6977464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedf08faf8ae7%3A0xd809b1bfc05dc52c!2sNail%20n%20Lash%20Studio%20%26%20Academy!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style="border:0; min-height: 420px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Nail n Lash Studio Mohali Map">
+          </iframe>
+          <div class="absolute bottom-4 left-4 right-4 sm:right-auto bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-xl border border-stone-200 text-xs font-medium text-stone-800 shadow-md flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            SCO 107, Phase 10, Sector 64, Mohali (SAS Nagar)
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER (ELEGANT & CLEAN) -->
+  <footer class="bg-[#191614] text-stone-400 py-12 border-t border-stone-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-stone-800">
+        
+        <div class="space-y-3">
+          <div class="font-serif text-2xl font-semibold text-white tracking-wider uppercase">
+            Nail <span class="text-[#C5A059] italic font-normal">n</span> Lash
+          </div>
+          <p class="text-stone-400 leading-relaxed text-[11px]">
+            Punjab's leading studio & ISO-certified beauty academy. Specializing in advanced nails, eyelash extensions, and permanent makeup artistry since 2019.
+          </p>
+          <div class="flex items-center gap-3 pt-1">
+            <a href="https://www.instagram.com/nailnlashstudio/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-stone-800 hover:bg-[#C5A059] hover:text-stone-900 text-white flex items-center justify-center transition" title="Studio Instagram">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="https://www.instagram.com/nailnlash_academy/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-stone-800 hover:bg-[#C5A059] hover:text-stone-900 text-white flex items-center justify-center transition" title="Academy Instagram">
+              <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+            </a>
+            <a href="tel:+918427520007" class="w-8 h-8 rounded-full bg-stone-800 hover:bg-[#C5A059] hover:text-stone-900 text-white flex items-center justify-center transition" title="Call Us">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white uppercase tracking-wider text-[11px] mb-3">Popular Services</h4>
+          <ul class="space-y-2 text-[11px]">
+            <li><a href="#services" class="hover:text-white transition">Gel & Acrylic Nail Extensions</a></li>
+            <li><a href="#services" class="hover:text-white transition">Russian Volume Eyelashes</a></li>
+            <li><a href="#services" class="hover:text-white transition">Microblading & Ombré Brows</a></li>
+            <li><a href="#services" class="hover:text-white transition">Permanent Lip Blushing</a></li>
+            <li><a href="#services" class="hover:text-white transition">Korean Glass & Hydra Facial</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white uppercase tracking-wider text-[11px] mb-3">The Academy</h4>
+          <ul class="space-y-2 text-[11px]">
+            <li><a href="#academy" class="hover:text-white transition">Nail Extension Technician Course</a></li>
+            <li><a href="#academy" class="hover:text-white transition">Lash Extension Masterclass</a></li>
+            <li><a href="#academy" class="hover:text-white transition">PMU & Microblading Certification</a></li>
+            <li><a href="#academy" class="hover:text-white transition">Tattoo Artistry & Hygiene Course</a></li>
+            <li><a href="#academy" class="hover:text-white transition">Live Model Clinical Training</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white uppercase tracking-wider text-[11px] mb-3">Studio & Region</h4>
+          <p class="text-[11px] leading-relaxed text-stone-400">
+            Ground Floor & Basement, SCO 107, Phase 10, Sector 64, Mohali, Punjab 160062
+          </p>
+          <p class="text-[11px] text-stone-400 mt-2">
+            Serving: Mohali • Chandigarh • Panchkula • Zirakpur • Kharar
+          </p>
+          <div class="mt-3 flex items-center gap-2 text-amber-400">
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+            <span class="text-white font-medium">4.5 / 5.0 (210+ Google Reviews)</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+        <p>© 2026 Nail n Lash Studio & Academy LLP. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-white transition">Privacy Policy</a>
+          <span>•</span>
+          <a href="#" class="hover:text-white transition">Terms of Service</a>
+          <span>•</span>
+          <span class="text-[#C5A059]">ISO Certified Salon & Academy</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK ACTION BUTTONS -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+    <!-- WhatsApp Floating Pill -->
+    <a href="https://wa.me/918427520007?text=Hello%20Nail%20n%20Lash%20Studio!%20I%20would%20like%20to%20book%20an%20appointment." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white px-4 py-3 rounded-full shadow-2xl transition transform hover:scale-105"
+       title="Chat on WhatsApp">
+      <i data-lucide="message-circle" class="w-5 h-5"></i>
+      <span class="hidden sm:inline text-xs font-semibold">Book on WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- BOOKING MODAL -->
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-stone-200 relative modal-enter-active">
+      
+      <!-- Close Button -->
+      <button id="close-booking-modal" class="absolute top-5 right-5 text-stone-400 hover:text-stone-900 p-1 rounded-full hover:bg-stone-100 transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="mb-6">
+        <span class="text-[10px] font-bold tracking-widest uppercase text-[#A67C37]">Fast Online Reservation</span>
+        <h3 class="font-serif text-2xl font-semibold text-stone-900 mt-1">Book Your Appointment</h3>
+        <p class="text-xs text-stone-500 mt-1">Nail n Lash Studio · Phase 10, Mohali (SAS Nagar)</p>
+      </div>
+
+      <form id="booking-form" class="space-y-4">
+        
+        <div>
+          <label class="block text-xs font-medium text-stone-700 mb-1">Your Full Name *</label>
+          <input type="text" id="booking-name" required placeholder="e.g. Simran Kaur" 
+                 class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-stone-300 focus:outline-none focus:border-[#C5A059] bg-[#FAF8F5]">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-stone-700 mb-1">WhatsApp / Phone Number *</label>
+          <input type="tel" id="booking-phone" required placeholder="e.g. +91 98765 43210" 
+                 class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-stone-300 focus:outline-none focus:border-[#C5A059] bg-[#FAF8F5]">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-stone-700 mb-1">Select Service *</label>
+          <select id="booking-service-select" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-stone-300 focus:outline-none focus:border-[#C5A059] bg-[#FAF8F5]">
+            <option value="Gel Nail Extensions">Gel Nail Extensions & Overlay</option>
+            <option value="Acrylic Full Set & Nail Art">Acrylic Full Set & 3D Nail Art</option>
+            <option value="Russian Volume Lashes (120-160+)">Russian Volume Eyelashes (120 - 160+)</option>
+            <option value="Classic Natural Lashes (60 Lashes)">Classic Natural Eyelashes (60 Lashes)</option>
+            <option value="Lash Lift, Perm & Brow Tint">Keratin Lash Lift, Perm & Brow Tint</option>
+            <option value="Microblading / Ombre Brows">Microblading & Ombré Powder Brows</option>
+            <option value="Permanent Lip Blushing">Permanent Lip Blushing</option>
+            <option value="Korean Glass Facial / BB Glow">Korean Glass Facial & BB Glow Treatment</option>
+            <option value="Hair Extensions & Keratin Treatment">Hair Extensions (Nano/Micro) & Keratin</option>
+            <option value="Bridal Full Glam Package">Bridal / Festive Custom Glam Package</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-medium text-stone-700 mb-1">Preferred Date *</label>
+            <input type="date" id="booking-date" required 
+                   class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-stone-300 focus:outline-none focus:border-[#C5A059] bg-[#FAF8F5]">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-stone-700 mb-1">Preferred Time *</label>
+            <select id="booking-time" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-stone-300 focus:outline-none focus:border-[#C5A059] bg-[#FAF8F5]">
+              <option value="10:00 AM">10:00 AM</option>
+              <option value="11:30 AM">11:30 AM</option>
+              <option value="01:00 PM">01:00 PM</option>
+              <option value="02:30 PM">02:30 PM</option>
+              <option value="04:00 PM">04:00 PM</option>
+              <option value="05:30 PM">05:30 PM</option>
+              <option value="06:30 PM">06:30 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-stone-700 mb-1">Special Requests / Nail Art references (Optional)</label>
+          <input type="text" id="booking-notes" placeholder="e.g. Want almond shape French ombré nails" 
+                 class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-stone-300 focus:outline-none focus:border-[#C5A059] bg-[#FAF8F5]">
+        </div>
+
+        <div class="pt-3 flex items-center justify-end gap-3">
+          <button type="button" id="cancel-booking-modal" class="px-4 py-2.5 rounded-xl border border-stone-300 text-stone-700 text-xs font-medium hover:bg-stone-50">
+            Cancel
+          </button>
+          <button type="submit" class="gold-button text-stone-900 font-semibold text-xs tracking-wider uppercase px-6 py-2.5 rounded-xl flex items-center gap-2">
+            <i data-lucide="send" class="w-3.5 h-3.5"></i>
+            Confirm & Send to WhatsApp
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ACADEMY SYLLABUS MODAL -->
+  <div id="academy-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm items-center justify-center p-4">
+    <div class="bg-stone-900 text-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-stone-700 relative modal-enter-active">
+      
+      <!-- Close Button -->
+      <button id="close-academy-modal" class="absolute top-5 right-5 text-stone-400 hover:text-white p-1 rounded-full hover:bg-stone-800 transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="mb-6">
+        <span class="text-[10px] font-bold tracking-widest uppercase text-[#C5A059]">Enrollment & Course Counseling</span>
+        <h3 class="font-serif text-2xl font-semibold text-white mt-1">Nail n Lash Academy Masterclasses</h3>
+        <p class="text-xs text-stone-400 mt-1">Get curriculum brochure, upcoming batch dates & fee structure directly.</p>
+      </div>
+
+      <form id="academy-form" class="space-y-4">
+        
+        <div>
+          <label class="block text-xs font-medium text-stone-300 mb-1">Your Full Name *</label>
+          <input type="text" id="student-name" required placeholder="e.g. Navjot Kaur" 
+                 class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-stone-700 focus:outline-none focus:border-[#C5A059] bg-stone-800 text-white">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-stone-300 mb-1">WhatsApp / Phone Number *</label>
+          <input type="tel" id="student-phone" required placeholder="e.g. +91 98123 45678" 
+                 class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-stone-700 focus:outline-none focus:border-[#C5A059] bg-stone-800 text-white">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-stone-300 mb-1">Selected Program *</label>
+          <select id="academy-course-field" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-stone-700 focus:outline-none focus:border-[#C5A059] bg-stone-800 text-white">
+            <option value="Professional Nail Extension Master">Professional Nail Extension Master (Gel, Acrylic, Art)</option>
+            <option value="Master Lash Extension Artistry">Master Lash Extension Artistry (Classic & Russian Volume)</option>
+            <option value="Permanent Make-Up & Microblading">Permanent Make-Up & Microblading Master Diploma</option>
+            <option value="All-in-One Complete Beauty Salon Masterclass">All-in-One Complete Beauty Salon Masterclass</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-stone-300 mb-1">Current Experience Level</label>
+          <select id="student-experience" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-stone-700 focus:outline-none focus:border-[#C5A059] bg-stone-800 text-white">
+            <option value="Complete Beginner (Never practiced before)">Complete Beginner (No prior experience)</option>
+            <option value="Practicing Beautician / Hair Stylist">Practicing Beautician / Salon Owner</option>
+            <option value="Seeking International Certification (Canada / UK / Australia)">Planning to move abroad (Canada / UK / Australia PR)</option>
+          </select>
+        </div>
+
+        <div class="pt-3 flex items-center justify-end gap-3">
+          <button type="submit" class="w-full gold-button text-stone-900 font-semibold text-xs tracking-wider uppercase py-3 rounded-xl flex items-center justify-center gap-2">
+            <i data-lucide="download" class="w-4 h-4"></i>
+            Request Syllabus & Fees on WhatsApp
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <!-- Interactive Scripts -->
+  <script src="script.js"></script>
+
+</body>
+</html>
